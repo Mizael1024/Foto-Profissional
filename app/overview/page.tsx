@@ -13,7 +13,7 @@ export default async function Index() {
   } = await supabase.auth.getUser();
 
   if (!user) {
-    return <div>User not found</div>;
+    return <div>Usuário não encontrado</div>;
   }
 
   const { data: models } = await supabase

@@ -45,35 +45,35 @@ export default function PricingSection() {
 
 const pricingOptions = [
   {
-    title: "Starter",
-    price: "1 Credit",
+    title: "Iniciante",
+    price: "1 Crédito",
     description:
-      "Perfect for individuals looking to enhance their online presence.",
+      "Perfeito para quem deseja aprimorar sua presença online.",
     features: [
-      "4 AI Headshots",
+      "4 Fotos Profissionais",
     ],
-    buttonText: "Choose Starter",
+    buttonText: "Quero esse",
     bgColor: "bg-white",
   },
   {
-    title: "Basic",
-    price: "3 Credits",
+    title: "Avançado",
+    price: "3 Créditos",
     description:
-      "Ideal for professionals requiring frequent updates to their profiles.",
+      "Ideal para profissionais que necessitam de atualizações frequentes em seus perfis.",
     features: [
-      "12 AI Headshots",
+      "12 Fotos Profissionais",
     ],
-    buttonText: "Choose Basic",
+    buttonText: "Quero esse",
     bgColor: "bg-blue-50",
   },
   {
-    title: "Premium",
-    price: "5 Credits",
-    description: "The best value with unlimited possibilities.",
+    title: "Profissional",
+    price: "5 Créditos",
+    description: "O melhor valor com possibilidades ilimitadas.",
     features: [
-      "20 AI Headshots",
+      "20 Fotos Profissionais",
     ],
-    buttonText: "Choose Premium",
+    buttonText: "Quero esse",
     bgColor: "bg-white",
   },
 ];

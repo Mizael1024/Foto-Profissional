@@ -40,8 +40,8 @@ export const Login = ({
       setTimeout(() => {
         setIsSubmitting(false);
         toast({
-          title: "Email sent",
-          description: "Check your inbox for a magic link to sign in.",
+          title: "Email enviado",
+          description: "Verifique sua caixa de entrada para encontrar um link mágico para entrar.",
           duration: 5000,
         });
         setIsMagicLinkSent(true);
@@ -49,10 +49,10 @@ export const Login = ({
     } catch (error) {
       setIsSubmitting(false);
       toast({
-        title: "Something went wrong",
-        variant: "destructive",
+        title: "Algo deu errado.",
+        variant: "Ocorreu um erro grave.",
         description:
-          "Please try again, if the problem persists, contact us at hello@tryleap.ai",
+          "Por favor, tente novamente. Se o problema persistir, entre em contato conosco em contato@fotoprofissional.com.br",
         duration: 5000,
       });
     }
@@ -136,13 +136,13 @@ export const Login = ({
                         "Email addresses with a '+' are not allowed",
                       emailIsntDisposable: (value: string) =>
                         !disposableDomains.includes(value.split("@")[1]) ||
-                        "Please use a permanent email address",
+                        "Por favor, use um endereço de e-mail permanente.",
                     },
                   })}
                 />
                 {isSubmitted && errors.email && (
                   <span className={"text-xs text-red-400"}>
-                    {errors.email?.message || "Email is required to sign in"}
+                    {errors.email?.message || "E-mail é necessário para fazer login."}
                   </span>
                 )}
               </div>
@@ -155,7 +155,7 @@ export const Login = ({
               className="w-full"
               type="submit"
             >
-              Continue with Email
+              Continuar com E-mail
             </Button>
           </form>
         </div>

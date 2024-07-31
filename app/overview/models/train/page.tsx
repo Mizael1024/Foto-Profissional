@@ -20,14 +20,14 @@ export default async function Index() {
         <Link href="/overview" className="text-sm w-fit">
           <Button variant={"outline"}>
             <FaArrowLeft className="mr-2" />
-            Go Back
+            Voltar
           </Button>
         </Link>
         <Card>
           <CardHeader>
-            <CardTitle>Train Model</CardTitle>
+            <CardTitle>Treinar Modelo</CardTitle>
             <CardDescription>
-              Choose a name, type, and upload some photos to get started.
+            Escolha um nome, tipo e carregue algumas fotos para começar.
             </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-6">
