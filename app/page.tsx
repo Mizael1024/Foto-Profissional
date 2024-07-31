@@ -25,8 +25,8 @@ export default async function Index() {
   return (
     <div className="flex flex-col items-center pt-16">
       <div className="flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full">
-        <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
-          <h1 className="text-4xl font-bold">
+        <div className="flex flex-col space-y-4 lg:w-3/5 w-full"> {/* Ajuste aqui */}
+          <h1 className="text-5xl font-bold">
             Foto de Perfil Profissional Gerada Por IA.
           </h1>
           <p className="text-gray-600 text-lg">
@@ -48,7 +48,7 @@ export default async function Index() {
             </Link>
           </div>
         </div>
-        <div className="lg:w-1/2 w-full mt-8 lg:mt-0">
+        <div className="lg:w-2/5 w-full mt-8 lg:mt-0"> {/* Ajuste aqui */}
           <img
             src={hero.src}
             alt="AI Headshot Illustration"
