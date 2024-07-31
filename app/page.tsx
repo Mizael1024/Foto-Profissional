@@ -27,18 +27,18 @@ export default async function Index() {
       <div className="flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full">
         <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
           <h1 className="text-5xl font-bold">
-            Foto de Perfil Profissional Gerada Por IA.
+            Foto de Perfil&nbsp;Profissional Gerada Por IA.
           </h1>
           <p className="text-gray-600 text-lg">
-            Não perca a chance de causar impacto. 
+            Não perca a chance de causar impacto.
             Uma foto de perfil profissional abre portas e te coloca em destaque.
           </p>
           <div className="flex flex-col space-y-2">
             <Link href="/login">
-              <Button className="w-full lg:w-1/2">Garanta Suas Fotos Profissionais Agora</Button>
+              <Button className="w-full lg:w-1/2">Gerar Foto Profissional</Button>
             </Link>
             <p className="text-sm text-gray-500 italic">
-            Confiada por profissionais em todo o mundo. Fácil e rápido.
+              Confiada por profissionais em todo o mundo. Fácil e rápido.
             </p>
           </div>
           <div className="mt-4 text-gray-500">
