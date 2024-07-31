@@ -26,8 +26,8 @@ export default async function Index() {
     <div className="flex flex-col items-center pt-16">
       <div className="flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full">
         <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
-          <h1 className="text-5xl font-bold">
-            Foto de Perfil&nbsp;Profissional Gerada Por IA.
+          <h1 className="text-4xl font-bold">
+            Foto de Perfil Profissional Gerada Por IA.
           </h1>
           <p className="text-gray-600 text-lg">
             Não perca a chance de causar impacto.
