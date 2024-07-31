@@ -50,7 +50,7 @@ export const Login = ({
       setIsSubmitting(false);
       toast({
         title: "Algo deu errado.",
-        variant: "Ocorreu um erro grave.",
+        variant: "destructive",
         description:
           "Por favor, tente novamente. Se o problema persistir, entre em contato conosco em contato@fotoprofissional.com.br",
         duration: 5000,
