@@ -40,8 +40,8 @@ export const Login = ({
       setTimeout(() => {
         setIsSubmitting(false);
         toast({
-          title: "Email enviado",
-          description: "Verifique sua caixa de entrada para encontrar um link mágico para entrar.",
+          title: "Email sent",
+          description: "Check your inbox for a magic link to sign in.",
           duration: 5000,
         });
         setIsMagicLinkSent(true);
@@ -49,10 +49,10 @@ export const Login = ({
     } catch (error) {
       setIsSubmitting(false);
       toast({
-        title: "Algo deu errado.",
+        title: "Something went wrong",
         variant: "destructive",
         description:
-          "Por favor, tente novamente. Se o problema persistir, entre em contato conosco em contato@fotoprofissional.com.br",
+          "Please try again, if the problem persists, contact us at hello@tryleap.ai",
         duration: 5000,
       });
     }
@@ -102,9 +102,9 @@ export const Login = ({
     <>
       <div className="flex items-center justify-center p-8">
         <div className="flex flex-col gap-4 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 p-4 rounded-xl max-w-sm w-full">
-          <h1 className="text-xl">Welcome</h1>
+          <h1 className="text-xl">Bem vindo</h1>
           <p className="text-xs opacity-60">
-            Sign in or create an account to get started.
+           Faça login ou crie uma conta para começar.
           </p>
           {/* <Button
             onClick={signInWithGoogle}
@@ -136,13 +136,13 @@ export const Login = ({
                         "Email addresses with a '+' are not allowed",
                       emailIsntDisposable: (value: string) =>
                         !disposableDomains.includes(value.split("@")[1]) ||
-                        "Por favor, use um endereço de e-mail permanente.",
+                        "Please use a permanent email address",
                     },
                   })}
                 />
                 {isSubmitted && errors.email && (
                   <span className={"text-xs text-red-400"}>
-                    {errors.email?.message || "E-mail é necessário para fazer login."}
+                    {errors.email?.message || "Email is required to sign in"}
                   </span>
                 )}
               </div>
@@ -155,7 +155,7 @@ export const Login = ({
               className="w-full"
               type="submit"
             >
-              Continuar com E-mail
+              Continuar com e-mail
             </Button>
           </form>
         </div>
