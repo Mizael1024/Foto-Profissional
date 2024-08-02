@@ -40,8 +40,8 @@ export const Login = ({
       setTimeout(() => {
         setIsSubmitting(false);
         toast({
-          title: "Email sent",
-          description: "Check your inbox for a magic link to sign in.",
+          title: "E-mail enviado",
+          description: "Abra seu e-mail e procure pelo link de confirmacão de conta.",
           duration: 5000,
         });
         setIsMagicLinkSent(true);
@@ -49,10 +49,10 @@ export const Login = ({
     } catch (error) {
       setIsSubmitting(false);
       toast({
-        title: "Something went wrong",
+        title: "Algo deu errado",
         variant: "destructive",
         description:
-          "Please try again, if the problem persists, contact us at hello@tryleap.ai",
+          "Tente novamente, se o problema persistir, entre em contato conosco pelo e-mail contato@fotoprofissional.com.br",
         duration: 5000,
       });
     }
