@@ -5,7 +5,7 @@ import result from "/public/result.png";
 export default function ExplainerSection() {
   return (
     <div className="w-full max-w-6xl mt-16 p-8 bg-gray-100 rounded-lg space-y-8">
-      <h2 className="text-3xl font-bold text-center mb-8">How It Works</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">Como Funciona</h2>
 
       {/* Step 1: Upload your images */}
       <div className="space-y-4">
@@ -13,15 +13,15 @@ export default function ExplainerSection() {
           <div className="text-3xl font-bold text-blue-600 bg-white border-2 border-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
             1
           </div>
-          <h3 className="text-2xl font-semibold">Upload your images</h3>
+          <h3 className="text-2xl font-semibold">Envie suas fotos</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          Upload 4+ high-quality selfies: front facing, 1 person in frame, no
-          glasses or hats.
+          Envie 4 ou mais selfies de alta qualidade: de frente, com apenas uma
+          pessoa no quadro, sem óculos ou boné.
         </p>
         <img
           src={example.src}
-          alt="AI Headshot example"
+          alt="Exemplo de Foto de Perfil Gerada por IA"
           className="rounded-lg object-cover w-full md:w-3/4 lg:w-1/2 mx-auto"
         />
       </div>
@@ -32,10 +32,13 @@ export default function ExplainerSection() {
           <div className="text-3xl font-bold text-blue-600 bg-white border-2 border-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
             2
           </div>
-          <h3 className="text-2xl font-semibold">Our AI gets to work</h3>
+          <h3 className="text-2xl font-semibold">
+            Nossa IA começa a trabalhar
+          </h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          The AI magic takes ~20 minutes. You'll get an email when its ready!
+          O processo leva cerca de 20 minutos. Você receberá um e-mail quando
+          estiver pronto!
         </p>
         <img
           src={blur.src}
@@ -50,10 +53,10 @@ export default function ExplainerSection() {
           <div className="text-3xl font-bold text-blue-600 bg-white border-2 border-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
             3
           </div>
-          <h3 className="text-2xl font-semibold">Get amazing headshots</h3>
+          <h3 className="text-2xl font-semibold">Receba fotos incríveis</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          Once your model is trained, we'll give you amazing headshots!
+          Depois que seu modelo estiver treinado, você receberá fotos incríveis!
         </p>
         <img
           src={result.src}
