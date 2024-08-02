@@ -62,9 +62,7 @@ export default function ClientSideModelsList({
           <div className="flex flex-row gap-4 w-full justify-between items-center text-center">
             <h1>Your models</h1>
             <Link href="/overview/models/train" className="w-fit">
-              <Button size={"sm"}>
-                Train model
-              </Button>
+              <Button size={"sm"}>Comece Agora</Button>
             </Link>
           </div>
           <ModelsTable models={models} />
@@ -73,12 +71,10 @@ export default function ClientSideModelsList({
       {models && models.length === 0 && (
         <div className="flex flex-col gap-4 items-center">
           <FaImages size={64} className="text-gray-500" />
-          <h1 className="text-2xl">
-            Get started by training your first model.
-          </h1>
+          <h1 className="text-2xl">Vamos lá! Clique no botão abaixo para começar. 😎</h1>
           <div>
             <Link href="/overview/models/train">
-              <Button size={"lg"}>Train model</Button>
+              <Button size={"lg"}>Comece Agora</Button>
             </Link>
           </div>
         </div>
