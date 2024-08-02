@@ -27,7 +27,7 @@ export default async function Index() {
           <CardHeader>
             <CardTitle>Treinar Modelo</CardTitle>
             <CardDescription>
-            Escolha um nome, tipo e carregue algumas fotos para começar.
+              Escolha um nome, gênero e carregue algumas fotos para começar.
             </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-6">
