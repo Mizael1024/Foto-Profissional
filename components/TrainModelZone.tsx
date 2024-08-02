@@ -56,9 +56,9 @@ export default function TrainModelZone() {
       // if user tries to upload more than 10 files, display a toast
       if (newFiles.length + files.length > 10) {
         toast({
-          title: "Too many images",
+          title: "Você enviou imagens demais",
           description:
-            "You can only upload up to 10 images in total. Please try again.",
+            "Você só pode enviar no máximo 10 imagens. Por favor, tente novamente.",
           duration: 5000,
         });
         return;
@@ -67,9 +67,9 @@ export default function TrainModelZone() {
       // display a toast if any duplicate files were found
       if (newFiles.length !== acceptedFiles.length) {
         toast({
-          title: "Duplicate file names",
+          title: "Nomes de arquivos duplicados",
           description:
-            "Some of the files you selected were already added. They were ignored.",
+            "Alguns dos arquivos selecionados já foram adicionados e foram ignorados.",
           duration: 5000,
         });
       }
@@ -80,9 +80,9 @@ export default function TrainModelZone() {
 
       if (totalSize + newSize > 4.5 * 1024 * 1024) {
         toast({
-          title: "Images exceed size limit",
+          title: "Você excedeu o limite de tamanho",
           description:
-            "The total combined size of the images cannot exceed 4.5MB.",
+            "O tamanho total combinado das imagens não pode ultrapassar 4,5 MB.",
           duration: 5000,
         });
         return;
@@ -91,8 +91,8 @@ export default function TrainModelZone() {
       setFiles([...files, ...newFiles]);
 
       toast({
-        title: "Images selected",
-        description: "The images were successfully selected.",
+        title: "Imagens selecionadas",
+        description: "As imagens foram selecionadas com sucesso.",
         duration: 5000,
       });
     },
@@ -148,13 +148,15 @@ export default function TrainModelZone() {
         <div className="flex flex-col gap-4">
           {responseMessage}
           <a href="/get-credits">
-            <Button size="sm">Get Credits</Button>
+            <Button size="sm">Comprar Créditos</Button>
           </a>
         </div>
       );
       toast({
-        title: "Something went wrong!",
-        description: responseMessage.includes("Not enough credits")
+        title: "Algo deu errado!",
+        description: responseMessage.includes(
+          "Você não tem créditos suficientes"
+        )
           ? messageWithButton
           : responseMessage,
         duration: 5000,
@@ -163,9 +165,9 @@ export default function TrainModelZone() {
     }
 
     toast({
-      title: "Model queued for training",
+      title: "Modelo na fila para treinamento",
       description:
-        "The model was queued for training. You will receive an email when the model is ready to use.",
+        "O modelo foi colocado na fila para treinamento. Você receberá um e-mail quando o modelo estiver pronto para uso.",
       duration: 5000,
     });
 
@@ -194,13 +196,14 @@ export default function TrainModelZone() {
             name="name"
             render={({ field }) => (
               <FormItem className="w-full rounded-md">
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Nome</FormLabel>
                 <FormDescription>
-                  Give your model a name so you can easily identify it later.
+                  Dê um nome ao seu modelo para que você possa identificá-lo
+                  facilmente depois.
                 </FormDescription>
                 <FormControl>
                   <Input
-                    placeholder="e.g. Natalie Headshots"
+                    placeholder="Exemplo: Mizael Xavier"
                     {...field}
                     className="max-w-screen-sm"
                     autoComplete="off"
@@ -211,9 +214,9 @@ export default function TrainModelZone() {
             )}
           />
           <div className="flex flex-col gap-4">
-            <FormLabel>Type</FormLabel>
+            <FormLabel>Gênero</FormLabel>
             <FormDescription>
-              Select the type of headshots you want to generate.
+              Escolha seu gênero para otimizar o treinamento do modelo.
             </FormDescription>
             <RadioGroup
               defaultValue={modelType}
@@ -235,7 +238,7 @@ export default function TrainModelZone() {
                   className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                 >
                   <FaMale className="mb-3 h-6 w-6" />
-                  Man
+                  Homem
                 </Label>
               </div>
 
@@ -251,7 +254,7 @@ export default function TrainModelZone() {
                   className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                 >
                   <FaFemale className="mb-3 h-6 w-6" />
-                  Woman
+                  Mulher
                 </Label>
               </div>
               <div>
@@ -266,7 +269,7 @@ export default function TrainModelZone() {
                   className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                 >
                   <FaRainbow className="mb-3 h-6 w-6" />
-                  Unisex
+                  Unissex
                 </Label>
               </div>
             </RadioGroup>
@@ -275,20 +278,23 @@ export default function TrainModelZone() {
             {...getRootProps()}
             className=" rounded-md justify-center align-middle cursor-pointer flex flex-col gap-4"
           >
-            <FormLabel>Samples</FormLabel>
+            <FormLabel>Exemplo</FormLabel>
             <FormDescription>
-              Upload 4-10 images of the person you want to generate headshots
-              for.
+              Envie de 4 a 10 imagens da pessoa para a qual você deseja gerar as
+              fotos de perfil.
             </FormDescription>
             <div className="outline-dashed outline-2 outline-gray-100 hover:outline-blue-500 w-full h-full rounded-md p-4 flex justify-center align-middle">
               <input {...getInputProps()} />
               {isDragActive ? (
-                <p className="self-center">Drop the files here ...</p>
+                <p className="self-center">
+                  Arraste os arquivos e solte aqui ...
+                </p>
               ) : (
                 <div className="flex justify-center flex-col items-center gap-2">
                   <FaImages size={32} className="text-gray-700" />
                   <p className="self-center">
-                    Drag 'n' drop some files here, or click to select files.
+                    Arraste e solte alguns arquivos aqui ou clique para enviar
+                    do seu dispositivo.
                   </p>
                 </div>
               )}
@@ -308,7 +314,7 @@ export default function TrainModelZone() {
                     className="w-full"
                     onClick={() => removeFile(file)}
                   >
-                    Remove
+                    Remover
                   </Button>
                 </div>
               ))}
@@ -316,8 +322,8 @@ export default function TrainModelZone() {
           )}
 
           <Button type="submit" className="w-full" isLoading={isLoading}>
-            Train Model{" "}
-            {stripeIsConfigured && <span className="ml-1">(1 Credit)</span>}
+            Vamos lá{" "}
+            {stripeIsConfigured && <span className="ml-1">(1 Crédito)</span>}
           </Button>
         </form>
       </Form>
