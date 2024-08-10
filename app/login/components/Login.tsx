@@ -41,7 +41,8 @@ export const Login = ({
         setIsSubmitting(false);
         toast({
           title: "E-mail enviado",
-          description: "Abra seu e-mail e procure pelo link de confirmacão de conta.",
+          description:
+            "Abra seu e-mail e procure pelo link de confirmacão de conta.",
           duration: 5000,
         });
         setIsMagicLinkSent(true);
@@ -104,9 +105,9 @@ export const Login = ({
         <div className="flex flex-col gap-4 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 p-4 rounded-xl max-w-sm w-full">
           <h1 className="text-xl">Bem vindo</h1>
           <p className="text-xs opacity-60">
-           Faça login ou crie uma conta para começar.
+            Faça login ou crie uma conta para começar.
           </p>
-          {/* <Button
+          <Button
             onClick={signInWithGoogle}
             variant={"outline"}
             className="font-semibold"
@@ -114,7 +115,7 @@ export const Login = ({
             <AiOutlineGoogle size={20} />
             Continue with Google
           </Button>
-          <OR /> */}
+          <OR />
 
           <form
             onSubmit={handleSubmit(onSubmit)}

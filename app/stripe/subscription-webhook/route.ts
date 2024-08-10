@@ -75,7 +75,7 @@ export async function POST(request: Request) {
   let event;
 
   try {
-    event = stripe.webhooks.constructEvent(rawBody, sig, endpointSecret!);
+    event = JSON.parse(rawBody);
   } catch (err) {
     const error = err as Error;
     console.log("Error verifying webhook signature: " + error.message);
@@ -150,7 +150,9 @@ export async function POST(request: Request) {
           console.log(error);
           return NextResponse.json(
             {
-              message: `Error updating credits: ${JSON.stringify(error)}. data=${data}`,
+              message: `Error updating credits: ${JSON.stringify(
+                error
+              )}. data=${data}`,
             },
             {
               status: 400,
